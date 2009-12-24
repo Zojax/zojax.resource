@@ -1,0 +1,10 @@
+<configure 
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:browser="http://namespaces.zope.org/browser">
+
+  <utility
+     name="zrt"
+     provides="zojax.resource.resource.IResourceFactoryType"
+     component=".zrtresource.zrtfactory" />
+
+</configure>

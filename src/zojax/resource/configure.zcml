@@ -1,0 +1,56 @@
+<configure 
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <utility
+     component=".fileresource.filefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="fileresource"
+     component=".fileresource.filefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="imageresource"
+     component=".fileresource.imagefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="gif"
+     component=".fileresource.imagefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="png"
+     component=".fileresource.imagefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="jpg"
+     component=".fileresource.imagefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="pt"
+     component=".resource.pagetemplatefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="zpt"
+     component=".resource.pagetemplatefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <utility
+     name="html"
+     component=".resource.pagetemplatefactory"
+     provides=".resource.IResourceFactoryType" />
+
+  <adapter
+     for="zope.app.publisher.browser.fileresource.FileResource"
+     factory=".fileresource.FileResourceAdapter"
+     permission="zope.Public" />
+
+  <include package=".zrtresource" />
+
+</configure>
